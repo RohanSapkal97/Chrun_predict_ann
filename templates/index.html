@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Churn_prediction</title>
+  </head>
+  <body>
+     
+      <br>
+   <div style="color:rgb(0, 1, 2)">
+    <form action="{{ url_for('predict')}}" method="post">
+
+    <div class="text-center">
+        <img src="static\churn.jpg" alt="churn_image" style="width:400px;height:300px;">
+      </div>
+    
+    <br>
+    <div class="text-center"><h1>Customer Churn Prediction System</h1></div>
+    <br>
+    
+    <div class="container">
+      <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="age_box" class="form-control" id="age" size="3" name="age" required="required">
+      </div>
+
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="gender" name="gender_male">
+                <option selected>---Select Gender---</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select><br>
+            
+              <label for="geography" class="form-label">Geography Location</label>
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="geography" name="geography_france">
+                  <option selected>---Select Option---</option>
+                  <option value="france">France</option>
+                  <option value="germany">Germany</option>
+                  <option value="spain">Spain</option>
+                </select><br>
+
+            <label for="hascrcard" class="form-label">Does user has credit card?</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="hascrcard" name="hascrcard_yes">
+                <option selected>---Select Option---</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+              
+              <div class="mb-3">
+                <label for="creditscore" class="form-label">Credit Score</label>
+                <input type="creditscore_box" class="form-control" id="creditscore" size="3" name="creditscore" required="required">
+              </div>
+
+              <div class="mb-3">
+                <label for="balance" class="form-label">Balance</label>
+                <input type="balance_box" class="form-control" id="balance" size="3" name="balance" required="required">
+              </div>
+
+                <label for="isactive" class="form-label">Is customer is active member?</label>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="isactive" name="isactive_yes">
+                    <option selected>---Select Option---</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select><br>
+
+                  <div class="mb-3">
+                    <label for="tenure" class="form-label">Tenure</label>
+                    <input type="tenure_box" class="form-control" id="tenure" size="3" name="tenure" required="required">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="numofproduct" class="form-label">Number of products owned by customer</label>
+                    <input type="numofproduct_box" class="form-control" id="numofproduct" size="3" name="numofproduct" required="required">
+                  </div>
+
+                      <div class="mb-3">
+                        <label for="estimatedsal" class="form-label">Estimated Salary</label>
+                        <input type="estimatedsal_box" class="form-control" id="estimatedsal" size="3" name="estimatedsal" required="required">
+                      </div>
+                        
+           <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Submit</button>
+           
+          </form>
+          </div>
+          
+          
+    
+          </div>
+          
+   
+      
+  
+    <style>
+      body {
+          background-color: rgb(30, 80, 218);
+          text-align: center;
+          padding: 0px;
+      }
+
+      
+
+      </style>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+  </body>
+</html>
